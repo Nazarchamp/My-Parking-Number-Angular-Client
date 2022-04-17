@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+    <header class="header">
+      <!--<div>
+        <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" (click)='toggleScrolling()'/>
+          <div class="alphaLayer"></div>
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a (click)='recenterMap()'><li>Current Location</li></a>
+          </ul>
+        </div>
+      </nav>
+      </div>-->
+      <h1>Find My Parking Number</h1>
+    </header>
+<p class = "info" *ngIf="errorCode!=undefined&&errorCode!=''">{{errorCode}}</p>
+<h1 class="bestGuess" *ngIf="bestGuessPrefix!=undefined">{{bestGuessPrefix}}<br><a href="https://m2.paybyphone.com/parking/start/location?locationId={{bestGuess}}">{{bestGuess}}</a></h1>
+<div class="mapInfo">
+
+  <h1 *ngIf="directionPoints==undefined">Showing Closest Locations</h1>
+  <a class="acc" (click)='toggleAccessibilty()'  *ngIf="directionPoints==undefined&&!accessibility"><img src="assets/acc.png"></a>
+  <a class="acc" (click)='toggleAccessibilty()'  *ngIf="directionPoints==undefined&&accessibility"><img src="assets/accBlue.png"></a>
+  <a class="ref" (click)='recenterMap()' *ngIf="directionPoints==undefined"><img src="assets/refresh.png"></a>
+
+  <h1 *ngIf="directionPoints!=undefined">Showing Directions</h1>
+  <a class = "x" (click)='cancelDirection()' *ngIf="directionPoints!=undefined"><img src="assets/x.png"></a>
+
+
+</div>
+<map-component 
+  [points]="displayedPoints"
+  [mainPoint]="currentPoint"
+  [directionPointsToDraw]="directionPoints"
+  [wiper]="mappedWiper"
+  (centerEvent)="recalculateCenter($event)">
+</map-component>
+<dropdown-info
+  [parkingStations]="infoPoints"
+  (directionEvent)= "drawDirectionLine($event)">
+</dropdown-info> 
+<div class="leftAlignDiv">
+<p class="tosText">By using this website you agree to the <a routerLink="/tos">Terms of Service</a></p>
+</div>
+</body>
+</html>

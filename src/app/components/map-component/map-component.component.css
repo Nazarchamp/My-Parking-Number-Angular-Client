@@ -1,0 +1,30 @@
+body{
+  background: #fff;
+}
+.header::before{
+  content: '';
+  padding: 16.25% 0; /* vertical value as  100% equals width */
+  display: inline-block;
+}
+.map{
+  height:62.86vw;
+    max-height: 600px;
+    width: 80vw;
+    margin:auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    z-index: 0;
+
+  }
+.mapframe {
+    display: flex;
+  flex-flow: column;
+  }
+ :host ::ng-deep .leaflet-popup-content h6 {
+  margin: 0 !important;
+  font-size: min(calc(10px + (25 - 10) * ((100vw - 280px) / (980 - 280))),25px) !important;
+  text-align:center !important;
+}
+:host ::ng-deep .leaflet-control-attribution{
+  font-size:5px !important;
+}

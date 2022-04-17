@@ -1,0 +1,58 @@
+<div *ngIf="parkingStations!=undefined">
+<div class="main_cont">
+    <button (click)="toggleDropDown($event)" type="button" class="collapsible" id="colbutton">Paystation {{this.parkingStations[0].paystationNumber}}: {{this.parkingStations[0].street}}</button>
+    <div class="content" id="content">
+        <h6>Pay By Phone Zone: <a href="https://m2.paybyphone.com/parking/start/location?locationId={{this.parkingStations[0].zone}}">{{this.parkingStations[0].zone}}</a></h6>
+        <p>${{this.parkingStations[0].hourlyRate}}/hour</p><p>{{this.parkingStations[0].timeLimit}} {{this.parkingStations[0].paymentTime}}</p>
+        <p>Total Space: {{this.parkingStations[0].totalSpace}} spots</p>
+        <p><b>Directions:</b></p>
+        <a class="drive" (click)="emitDirection(0, true)"><img src="assets/car.png"></a>
+        <a class="walk" (click)="emitDirection(0, false)"><img src="assets/walk.png"></a>
+    </div>
+</div>
+<div class="main_cont">
+    <button (click)="toggleDropDown($event)" type="button" class="collapsible" id="colbutton">Paystation {{this.parkingStations[1].paystationNumber}}: {{this.parkingStations[1].street}}</button>
+    <div class="content" id="content">
+        <h6>Pay By Phone Zone: <a href="https://m2.paybyphone.com/parking/start/location?locationId={{this.parkingStations[1].zone}}">{{this.parkingStations[1].zone}}</a></h6>
+        <p>${{this.parkingStations[1].hourlyRate}}/hour</p><p>{{this.parkingStations[1].timeLimit}} {{this.parkingStations[1].paymentTime}}</p>
+        <p>Total Space: {{this.parkingStations[1].totalSpace}} spots</p>
+        <p><b>Directions:</b></p>
+        <a class="drive" (click)="emitDirection(1, true)"><img src="assets/car.png"></a>
+        <a class="walk" (click)="emitDirection(1, false)"><img src="assets/walk.png"></a>
+    </div>
+</div>
+<div class="main_cont">
+    <button (click)="toggleDropDown($event)" type="button" class="collapsible" id="colbutton">Paystation {{this.parkingStations[2].paystationNumber}}: {{this.parkingStations[2].street}}</button>
+    <div class="content" id="content">
+        <h6>Pay By Phone Zone: <a href="https://m2.paybyphone.com/parking/start/location?locationId={{this.parkingStations[2].zone}}">{{this.parkingStations[2].zone}}</a></h6>
+        <p>${{this.parkingStations[2].hourlyRate}}/hour</p><p>{{this.parkingStations[2].timeLimit}} {{this.parkingStations[2].paymentTime}}</p>
+        <p>Total Space: {{this.parkingStations[2].totalSpace}} spots</p>
+        <p><b>Directions:</b></p>
+        <a class="drive" (click)="emitDirection(2, true)"><img src="assets/car.png"></a>
+        <a class="walk" (click)="emitDirection(2, false)"><img src="assets/walk.png"></a>
+    </div>
+</div>
+<div class="main_cont">
+    <button (click)="toggleDropDown($event)" type="button" class="collapsible" id="colbutton">Paystation {{this.parkingStations[3].paystationNumber}}: {{this.parkingStations[3].street}}</button>
+    <div class="content" id="content">
+        <h6>Pay By Phone Zone: <a href="https://m2.paybyphone.com/parking/start/location?locationId={{this.parkingStations[3].zone}}">{{this.parkingStations[3].zone}}</a></h6>
+        <p>${{this.parkingStations[3].hourlyRate}}/hour</p><p>{{this.parkingStations[3].timeLimit}} {{this.parkingStations[3].paymentTime}}</p>
+        <p>Total Space: {{this.parkingStations[3].totalSpace}} spots</p>
+        <p><b>Directions:</b></p>
+        <a class="drive" (click)="emitDirection(3, true)"><img src="assets/car.png"></a>
+        <a class="walk" (click)="emitDirection(3, false)"><img src="assets/walk.png"></a>
+    </div>
+</div>
+<div class="main_cont">
+    <button (click)="toggleDropDown($event)" type="button" class="collapsible" id="colbutton">Paystation {{this.parkingStations[4].paystationNumber}}: {{this.parkingStations[4].street}}</button>
+    <div class="content" id="content">
+        <h6>Pay By Phone Zone: <a href="https://m2.paybyphone.com/parking/start/location?locationId={{this.parkingStations[4].zone}}">{{this.parkingStations[4].zone}}</a></h6>
+        <p>${{this.parkingStations[4].hourlyRate}}/hour</p><p>{{this.parkingStations[4].timeLimit}} {{this.parkingStations[4].paymentTime}}</p>
+        <p>Total Space: {{this.parkingStations[4].totalSpace}} spots</p>
+        <p><b>Directions:</b></p>
+        <a class="drive" (click)="emitDirection(4, true)"><img src="assets/car.png"></a>
+        <a class="walk" (click)="emitDirection(4, false)"><img src="assets/walk.png"></a>
+    </div>
+</div>
+<div class="filler"></div>
+</div>

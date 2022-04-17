@@ -1,0 +1,45 @@
+.header::before{
+content: '';
+padding: 6.25% 0; /* vertical value as  100% equals width */
+display: inline-block;
+}
+
+.header {
+max-height: 120px;
+    display: flex;
+    align-items: center;
+    background: #00669B;
+}
+.header h1 {
+    font-size: min(calc(19px + (65 - 19) * ((100vw - 280px) / (980 - 280))),65px); 
+    color:white; 
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.tosText{
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    color: #123985;
+}
+.tosHeader{
+    color: #123985;
+    padding-left: 5px;
+    margin-bottom: 0px;
+}
+a{
+    color: #123985;
+    border: #123985;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 2px;
+    border-style: solid;
+    text-decoration: none;
+}
+.centeringDiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
